@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+
+if ls $BUILD_DIR | grep '\(m\|M\|GNUm\)akefile' &> /dev/null; then
+  echo "Makefile"
+  exit 0
+else
+  exit 1
+fi
